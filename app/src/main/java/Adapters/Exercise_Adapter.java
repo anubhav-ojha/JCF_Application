@@ -17,12 +17,12 @@ import java.util.ArrayList;
 
 import Models.Exercise_Model;
 
-public class Excercise_Adapter extends RecyclerView.Adapter<Excercise_Adapter.viewHolder>{
+public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.viewHolder>{
 //changed class from public class to class
     ArrayList<Exercise_Model> list ;
     Context context ;
 
-    public Excercise_Adapter(ArrayList<Exercise_Model> lists, Context context) {
+    public Exercise_Adapter(ArrayList<Exercise_Model> lists, Context context) {
         this.list = list;
         this.context = context;
     }
