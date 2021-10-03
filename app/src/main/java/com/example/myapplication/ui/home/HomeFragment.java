@@ -34,6 +34,9 @@ public class HomeFragment extends Fragment {
         muscleGroupRecyclerView = binding.homeFragmentRecyclerView;
 
         ArrayList<Exercise_Model> list = new ArrayList<>() ;
+        for(int i = 0; i< 10; i++) {
+            list.add(new Exercise_Model("", "Name"));
+        }
         Exercise_Adapter adapter = new Exercise_Adapter(list,getContext());
         muscleGroupRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         muscleGroupRecyclerView.setAdapter(adapter);

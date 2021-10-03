@@ -23,7 +23,7 @@ public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.view
     Context context ;
 
     public Exercise_Adapter(ArrayList<Exercise_Model> lists, Context context) {
-        this.list = list;
+        this.list = lists;
         this.context = context;
     }
 

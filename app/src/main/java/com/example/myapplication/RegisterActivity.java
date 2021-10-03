@@ -103,7 +103,6 @@ public class RegisterActivity extends AppCompatActivity {
                     else
                     {
                         Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
-
                     }
                 }
             });
