@@ -4,7 +4,7 @@ public class Exercise_Model {
     String pic ;
     String text ;
 
-    void MainModel()
+   public Exercise_Model()
     {
 
     }

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import Models.Exercise_Model;
 
 public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.viewHolder>{
-//changed class from public class to class
+
     ArrayList<Exercise_Model> list ;
     Context context ;
 
@@ -39,13 +39,13 @@ public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.view
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
 
         Exercise_Model model = list.get(position) ;
-        //holder.rv_imageView.setImageResource(model.getPic());
+       // holder.rv_imageView.setImageResource(model.getPic());
         holder.rv_textView.setText(model.getText());
         Glide.with(holder.rv_imageView.getContext())
                 .load(model.getPic())
-                .placeholder(R.drawable.chest1)
+                //.placeholder(R.drawable.chest1)
                 .circleCrop()
-                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .error(R.drawable.chest1)
                 .into(holder.rv_imageView);
     }
 
