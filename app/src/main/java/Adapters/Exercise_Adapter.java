@@ -19,11 +19,11 @@ import Models.Exercise_Model;
 
 public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.viewHolder>{
 
-    ArrayList<Exercise_Model> list ;
+    ArrayList<Exercise_Model> datalist;
     Context context ;
 
     public Exercise_Adapter(ArrayList<Exercise_Model> lists, Context context) {
-        this.list = lists;
+        this.datalist = lists;
         this.context = context;
     }
 
@@ -31,14 +31,13 @@ public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.view
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.rv_item_view, parent,false);
-
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
 
-        Exercise_Model model = list.get(position) ;
+        Exercise_Model model = datalist.get(position) ;
        // holder.rv_imageView.setImageResource(model.getPic());
         holder.rv_textView.setText(model.getText());
         Glide.with(holder.rv_imageView.getContext())
@@ -51,7 +50,7 @@ public class Exercise_Adapter extends RecyclerView.Adapter<Exercise_Adapter.view
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return datalist.size();
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
